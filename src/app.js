@@ -12,6 +12,8 @@ import 'react-dates/lib/css/_datepicker.css'
 
 const store = configureStore()
 
+console.log ( 'Test commit for git' )
+
 const jsx = (
     <Provider store = { store }>
         <AppRouter />
