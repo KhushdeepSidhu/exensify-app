@@ -66,3 +66,25 @@ test ( 'Should not edit an expense with invalid id', () => {
     const state = expensesReducers ( expenses, action )
     expect ( state ). toEqual ( expenses )
 } )
+
+test ( 'Should set expenses', () => {
+    const expenses = [ {
+        id: '2222',
+        description: 'Phone Bill',
+        note: '',
+        amount: 2222,
+        createdAt: 0
+    }, {
+        id: '4444',
+        description: 'Internet Bill',
+        note: '',
+        amount: 10978,
+        createdAt: 1000
+    } ]
+    const action = {
+        type: 'SET_EXPENSES',
+        expenses
+    }
+    const state = expensesReducers ( expenses, action )
+    expect ( state ). toEqual ( expenses )
+} )
